@@ -1,0 +1,119 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:	Born to give
+Version:	1.2
+Last change:
+Author:	JA & JK 
+-------------------------------------------------------------------*/
+/* Stylesheets and Google fonts import */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   1. Basic Styles
+================================================== */
+
+html, body {
+    height: 100%;
+}
+
+html, hmtl a {
+    width: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a {
+    color: #5e5e5e;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0.2s;
+    -moz-transition: all 0.3s ease 0.2s;
+    -ms-transition: all 0.3s ease 0.2s;
+    -o-transition: all 0.3s ease 0.2s;
+    transition: all 0.3s ease 0.1s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+    color: #5e5e5e;
+}
+
+/* ==================================================
+Site Structure & Appearance
+================================================== */
+.featured-texts, .featured-links {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.featured-links {
+    position: relative;
+}
+
+.featured-links .featured-link {
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 20px 30px 0;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.featured-links .featured-link:nth-child(1) {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.featured-links .featured-link:nth-child(2) {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.featured-links .featured-link:nth-child(3) {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.featured-links .featured-link:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.featured-link span {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .6);
+    display: block;
+    font-size: 12px;
+}
+
+.featured-link strong {
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
