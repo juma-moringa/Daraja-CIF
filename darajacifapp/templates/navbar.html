@@ -1,0 +1,40 @@
+{% load static %}
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+    <nav class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/logo.png' %}" width="180" height="auto" class="d-inline-block align-top"
+                alt="logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto dcif-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Introduction</a>
+                        <a class="dropdown-item" href="#">Team</a>
+                        <a class="dropdown-item" href="#">Membership and Networks</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Projects</a> </li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+            <span class="navbar-text">
+                <i class="fa fa-phone"></i> 254-720299100
+            </span>
+        </div>
+    </nav>
+
+</nav>
