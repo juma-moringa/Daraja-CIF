@@ -66,6 +66,123 @@ a:focus {
     color: #5e5e5e;
 }
 
+.lgray-bg {
+    background: #F7F7F7;
+}
+
+
+/* ==================================================
+   2. Typography
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h2 small {
+    display: block;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 45%
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+/* ==================================================
+   4. Padding Sets
+================================================== */
+
+.padding-tb75 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* ==================================================
+   5. Spacers Sets
+================================================== */
+.spacer-10 {
+    height: 10px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-20 {
+    height: 20px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-30 {
+    height: 30px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-40 {
+    height: 40px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-50 {
+    height: 50px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-60 {
+    height: 60px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-75 {
+    height: 75px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-100 {
+    height: 100px;
+    clear: both;
+    width: 100%;
+}
+
+/* ==================================================
 /* ==================================================
 Site Structure & Appearance
 ================================================== */
@@ -114,6 +231,42 @@ Site Structure & Appearance
 .featured-link strong {
     font-size: 30px;
     color: #fff;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.block-title {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+featured-texts {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.featured-text {
+    border-right: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.featured-texts .featured-text:last-child {
+    border-right: 0;
+}
+
+.featured-text span {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .3);
+    display: block;
+    font-size: 12px;
+}
+
+.featured-text strong {
+    font-size: 30px;
+    color: #333;
     display: block;
     font-family: 'Playfair Display', serif;
 }
