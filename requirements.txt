@@ -5,11 +5,11 @@ cloudinary==1.26.0
 config==0.5.0.post0
 confusable-homoglyphs==3.2.0
 dj-database-url==0.5.0
-Django==3.1.3
-django-bootstrap3==15.0.0
+Django
+django-bootstrap3
 django-bootstrap4==3.0.1
-django-heroku==0.3.1
-django-registration==2.4.1
+
+django-registration
 django-utils-six==2.0
 djangorestframework==3.12.4
 gunicorn==20.1.0

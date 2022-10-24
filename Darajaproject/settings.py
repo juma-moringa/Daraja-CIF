@@ -13,13 +13,13 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 from pathlib import Path
-from decouple import config,Csv
 
 
 
 
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3',
-    'darajacifapp.apps.darajacifappConfig'
+    'darajacifapp.apps.DarajacifappConfig',
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
