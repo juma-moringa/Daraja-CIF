@@ -1,0 +1,272 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:	Born to give
+Version:	1.2
+Last change:
+Author:	JA & JK 
+-------------------------------------------------------------------*/
+/* Stylesheets and Google fonts import */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   1. Basic Styles
+================================================== */
+
+html, body {
+    height: 100%;
+}
+
+html, hmtl a {
+    width: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a {
+    color: #5e5e5e;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0.2s;
+    -moz-transition: all 0.3s ease 0.2s;
+    -ms-transition: all 0.3s ease 0.2s;
+    -o-transition: all 0.3s ease 0.2s;
+    transition: all 0.3s ease 0.1s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+    color: #5e5e5e;
+}
+
+.lgray-bg {
+    background: #F7F7F7;
+}
+
+
+/* ==================================================
+   2. Typography
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h2 small {
+    display: block;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 45%
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+/* ==================================================
+   4. Padding Sets
+================================================== */
+
+.padding-tb75 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* ==================================================
+   5. Spacers Sets
+================================================== */
+.spacer-10 {
+    height: 10px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-20 {
+    height: 20px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-30 {
+    height: 30px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-40 {
+    height: 40px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-50 {
+    height: 50px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-60 {
+    height: 60px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-75 {
+    height: 75px;
+    clear: both;
+    width: 100%;
+}
+
+.spacer-100 {
+    height: 100px;
+    clear: both;
+    width: 100%;
+}
+
+/* ==================================================
+/* ==================================================
+Site Structure & Appearance
+================================================== */
+.featured-texts, .featured-links {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.featured-links {
+    position: relative;
+}
+
+.featured-links .featured-link {
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 20px 30px 0;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.featured-links .featured-link:nth-child(1) {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.featured-links .featured-link:nth-child(2) {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.featured-links .featured-link:nth-child(3) {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.featured-links .featured-link:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.featured-link span {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .6);
+    display: block;
+    font-size: 12px;
+}
+
+.featured-link strong {
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.block-title {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+featured-texts {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.featured-text {
+    border-right: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.featured-texts .featured-text:last-child {
+    border-right: 0;
+}
+
+.featured-text span {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .3);
+    display: block;
+    font-size: 12px;
+}
+
+.featured-text strong {
+    font-size: 30px;
+    color: #333;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}

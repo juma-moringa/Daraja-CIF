@@ -295,10 +295,10 @@
             <div class="row">
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                        <h1 style="font-size: 24px;"> About Us.</h1>
-                        
+                        <h1 style="font-size: 24px;"> About <b style="color: rgb(4, 190, 4)">Us</b>.</h1>
+
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -316,7 +316,7 @@
                             processes.
                         </p>
                         <div class="text-center">
-                            <a href="" class="more-btn">Read More <i class="bx bx-chevron-right"></i></a>
+                            <a href="#members" class="more-btn">Read More <i class="bx bx-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
         </div>
     </section>
     <div class="container what-we-do">
-        <h2 class="headings">Who We Are</h2>
+        <h2 class="headings"> <b style="color: rgb(4, 190, 4)">Who </b>We Are</h2>
         <div class="row">
             <div class="col-md-4">
                 <div id="toggler">
@@ -377,7 +377,7 @@
                             as Kenya ECD Network and Elimu Yetu Coalition</p>
                     </div>
                     <div id="design-image">
-                        <img src="/assets/imgs/icons8-ngo-64.png" alt="ngo">
+                        <img src="/static/assets/icons8-ngo-64.png" alt="ngo">
                         <p>National NGO</p>
                     </div>
                 </div>
@@ -395,7 +395,7 @@
                         </p>
                     </div>
                     <div id="development-image">
-                        <img src="/assets/imgs/icons8-education-50.png" alt="education">
+                        <img src="/static/assets/icons8-education-50.png" alt="education">
                         <P>Ministry Of Education</P>
                     </div>
                 </div>
@@ -411,7 +411,7 @@
 
                     </div>
                     <div id="product-image">
-                        <img src="/assets/imgs/icons8-governance-64.png" alt="governance">
+                        <img src="/static/assets/icons8-governance-64.png" alt="governance">
                         <P>Strong Governance</P>
                     </div>
                 </div>
@@ -422,17 +422,26 @@
         <div class="container">
 
             <div class="text-center" data-aos="zoom-in" style="font-family: 'Patrick Hand', cursive;">
-                <h3 style="font-family: 'Patrick Hand', cursive;">MEMBERSHIP AND NETWORKS</h3>
+                <h3  id="members" style="font-family: 'Patrick Hand', cursive;">MEMBERSHIP AND<b style="color: rgb(4, 190, 4)">
+                        NETWORKS</b></h3>
                 <p>Daraja is a member of advocacy and professional networks/coalitions such as Elimu Yetu (Our
                     Education) Coalition and ECD Network- Kenya. Daraja has also participated in a number of policies
                     forums & processes including:</p>
                 <br>
-                <ul>
-                    <li>APBET Policy development for low cost private schools located in the non-formal settlements.
+                <ul class="text-center">
+                    <li>
+                        <iconify-icon icon="teenyicons:shield-tick-outline" width="16" height="16"></iconify-icon>APBET
+                        Policy development for low cost private schools located in the non-formal settlements.
                     </li>
-                    <li>Daraja has supported the legislation of the Child care Facilities Act 2017 for Nairobi city
-                        County</li>
-                    <li> ECDE policy review Ministry of Education</li>
+                    <li>
+                        <iconify-icon icon="teenyicons:shield-tick-outline" width="16" height="16"></iconify-icon>Daraja
+                        has supported the legislation of the Child care Facilities Act 2017 for Nairobi city
+                        County
+                    </li>
+                    <li>
+                        <iconify-icon icon="teenyicons:shield-tick-outline" width="16" height="16"></iconify-icon>ECDE
+                        policy review Ministry of Education
+                    </li>
                 </ul>
                 <br>
                 <P>
@@ -445,26 +454,28 @@
 
         </div>
     </section>
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script>
         // toggle effect
-$(document).ready(function(){
-    $("#toggler").click(function(){
-      $("#design-image").toggle();
-      $("#design").toggle();
-    });
-  });
-  $(document).ready(function(){
-    $("#toggler2").click(function(){
-      $("#development-image").toggle();
-      $("#development").toggle();
-    });
-  });
-  $(document).ready(function(){
-    $("#toggler3").click(function(){
-      $("#product-image").toggle();
-      $("#product").toggle();
-    });
-  }); 
+        $(document).ready(function () {
+            $("#toggler").click(function () {
+                $("#design-image").toggle();
+                $("#design").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("#toggler2").click(function () {
+                $("#development-image").toggle();
+                $("#development").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $("#toggler3").click(function () {
+                $("#product-image").toggle();
+                $("#product").toggle();
+            });
+        });
     </script>
 
     {% endblock %}

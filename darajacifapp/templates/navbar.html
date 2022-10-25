@@ -1,5 +1,5 @@
 {% load static %}
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
     <nav class="container">
         <a class="navbar-brand" href="#">
             <img src="{% static 'assets/logo.png' %}" width="180" height="auto" class="d-inline-block align-top"
@@ -20,9 +20,9 @@
                         About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Introduction</a>
-                        <a class="dropdown-item" href="#">Team</a>
-                        <a class="dropdown-item" href="#">Membership and Networks</a>
+                        <a class="dropdown-item" href="about/">Introduction</a>
+                        <a class="dropdown-item" href="staff/">Team</a>
+                        <a class="dropdown-item" href="#members">Membership and Networks</a>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
