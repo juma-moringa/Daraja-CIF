@@ -1,0 +1,470 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<style>
+    /* body {
+        font-family: "Open Sans", sans-serif;
+        color: #444444;
+    } */
+
+    a {
+        color: #1fe95c;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #1fe95c;
+
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif;
+    }
+
+
+
+    /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+    section {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+
+    .section-bg {
+        background-color: #f6f6f7;
+    }
+
+    .section-title {
+        padding-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .section-title h2::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        color: #1fe95c;
+        background: #009970;
+        bottom: 0;
+        left: 0;
+    }
+
+    .section-title p {
+        margin-bottom: 0;
+    }
+
+
+    /*--------------------------------------------------------------
+  # About
+  --------------------------------------------------------------*/
+    .about .content h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-family: 'Patrick Hand', cursive;
+    }
+
+    .about .content h3 {
+        font-weight: 500;
+        line-height: 32px;
+        font-size: 24px;
+        font-family: 'Patrick Hand', cursive;
+    }
+
+    .about .content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .about .content ul li {
+        padding: 10px 0 0 28px;
+        position: relative;
+    }
+
+    .about .content ul i {
+        left: 0;
+        top: 7px;
+        position: absolute;
+        font-size: 20px;
+
+        color: #1fe95c;
+        ;
+    }
+
+    .about .content p:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /*--------------------------------------------------------------
+  # Why Us
+  --------------------------------------------------------------*/
+    .why-us .content {
+        padding: 30px;
+        background: #1fe95c;
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    .why-us .content h3 {
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    .why-us .content p {
+        margin-bottom: 30px;
+    }
+
+    .why-us .content .more-btn {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 6px 30px 8px 30px;
+        color: #fff;
+        border-radius: 50px;
+        transition: all ease-in-out 0.4s;
+    }
+
+    .why-us .content .more-btn i {
+        font-size: 14px;
+    }
+
+    .why-us .content .more-btn:hover {
+        color: #009970;
+        background: #fff;
+    }
+
+    .why-us .icon-boxes .icon-box {
+        text-align: center;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 40px 30px;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .why-us .icon-boxes .icon-box i {
+        font-size: 40px;
+        color: #14e4d9;
+        margin-bottom: 30px;
+    }
+
+    .why-us .icon-boxes .icon-box h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+    }
+
+    .why-us .icon-boxes .icon-box p {
+        font-size: 15px;
+        color: #848484;
+    }
+
+    .why-us .icon-boxes .icon-box:hover {
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .cta {
+        background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsokodirectory.com%2F2018%2F05%2Frelief-for-nyeri-ecde-caregivers-as-county-government-absorbs-them%2F&psig=AOvVaw20gtCuWPM2N6un-7JQaftx&ust=1666696929697000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCID8tIbg-PoCFQAAAAAdAAAAABAM") fixed center center;
+        background-size: cover;
+        padding: 60px 0;
+    }
+
+    .cta h3 {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .cta p {
+        color: #fff;
+    }
+
+    .cta .cta-btn {
+        font-family: 'Patrick Hand', cursive;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 8px 28px;
+        border-radius: 25px;
+        transition: 0.5s;
+        margin-top: 10px;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+    .cta .cta-btn:hover {
+        background: #3fbbc0;
+        border: 2px solid #3fbbc0;
+    }
+
+    .gallery {
+        overflow: hidden;
+    }
+
+    .gallery .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .gallery .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        opacity: 1;
+        border: 1px solid #3fbbc0;
+    }
+
+    .gallery .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: #3fbbc0;
+    }
+
+    .gallery .swiper-slide-active {
+        text-align: center;
+    }
+
+    @media (min-width: 992px) {
+        .gallery .swiper-wrapper {
+            padding: 40px 0;
+        }
+
+        .gallery .swiper-slide-active {
+            border: 6px solid #3fbbc0;
+            padding: 4px;
+            background: #fff;
+            z-index: 1;
+            transform: scale(1.2);
+            margin-top: 10px;
+        }
+    }
+
+    .what-we-do {
+        padding-top: 40px;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+
+    }
+
+    .what-we-do .headings {
+        padding-bottom: 38px;
+    }
+
+    #design,
+    #product,
+    #development {
+        display: none;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    #design .title,
+    #product .title,
+    #development .title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+</style>
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="row content">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <h1 style="font-size: 24px;"> About Us.</h1>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="why-us">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+                    <div class="content">
+                        <h3>Daraja- CIF</h3>
+                        <p>
+                            Having a literate and empowered society engaging actively in development and governance
+                            processes.
+                        </p>
+                        <div class="text-center">
+                            <a href="" class="more-btn">Read More <i class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <i class="bx bx-receipt"></i>
+                                    <h4>Our Vision</h4>
+                                    <p> Having a literate and empowered society engaging actively in development and
+                                        governance
+                                        processes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <i class="bx bx-cube-alt"></i>
+                                    <h4>Mission </h4>
+                                    <p>To organize, empower and transform marginalized communities through service
+                                        delivery, capacity building, advocacy and research. Daraja operates as a
+                                        national organization in Kenya
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="icon-box mt-4 mt-xl-0">
+                                    <i class="bx bx-images"></i>
+                                    <h4>Our Strengths</h4>
+                                    <p> Over 10 years’ experience working with children on programmatic, advocacy and
+                                        research.<br>
+                                        The key focus for Darajas target population is within the vulnerable and
+                                        marginalized communities in Nairobi’s urban informal settlements and
+                                        environs<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container what-we-do">
+        <h2 class="headings">Who We Are</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="toggler">
+                    <div id="design">
+                        <h2 class="title">National NGO</h2>
+                        <p>Daraja Civic Initiatives Forum is a national NGO registered in Kenya with a focus on three
+                            thematic areas, namely; - Early Childhood Care, Education & Development (ECCED), governance
+                            (social accountability), and basic education. In partnership with others (government
+                            agencies, CSOs, and local communities), we deliver our mandate through research, learning
+                            facilitation, community mobilization, advocacy/policy engagements, capacity building, and
+                            service delivery. Daraja is a member of advocacy and professional networks/coalitions such
+                            as Kenya ECD Network and Elimu Yetu Coalition</p>
+                    </div>
+                    <div id="design-image">
+                        <img src="/assets/imgs/icons8-ngo-64.png" alt="ngo">
+                        <p>National NGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="toggler2">
+                    <div id="development">
+                        <h2 class="title">Ministry Of Education</h2>
+                        <p>Daraja has a strong Governance structure led by a 10-member board of management, whose role
+                            is to advise on policy and strategic direction. A secretariat headed by a programs manager,
+                            assisted by project coordinators who head the 3 core program areas: together with the
+                            Finance grants officer form the management committee. Daraja also has a seasoned M&E
+                            department headed by a Monitoring, evaluation and learning officer. To support program
+                            activities is a pool of project officers, trainers, Community Resource persons..
+                        </p>
+                    </div>
+                    <div id="development-image">
+                        <img src="/assets/imgs/icons8-education-50.png" alt="education">
+                        <P>Ministry Of Education</P>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="toggler3">
+                    <div id="product">
+                        <h2 class="title">Strong Governance</h2>
+                        <p>Daraja also works with Ministry of Education to enhance equitable access to quality
+                            education. This involves establishment of coordination committees/mechanisms at sub-county,
+                            county and national level to discuss) issues for action by MOE, to share best practices,
+                            lessons and replicable strategies.</p>
+
+                    </div>
+                    <div id="product-image">
+                        <img src="/assets/imgs/icons8-governance-64.png" alt="governance">
+                        <P>Strong Governance</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="cta" class="">
+        <div class="container">
+
+            <div class="text-center" data-aos="zoom-in" style="font-family: 'Patrick Hand', cursive;">
+                <h3 style="font-family: 'Patrick Hand', cursive;">MEMBERSHIP AND NETWORKS</h3>
+                <p>Daraja is a member of advocacy and professional networks/coalitions such as Elimu Yetu (Our
+                    Education) Coalition and ECD Network- Kenya. Daraja has also participated in a number of policies
+                    forums & processes including:</p>
+                <br>
+                <ul>
+                    <li>APBET Policy development for low cost private schools located in the non-formal settlements.
+                    </li>
+                    <li>Daraja has supported the legislation of the Child care Facilities Act 2017 for Nairobi city
+                        County</li>
+                    <li> ECDE policy review Ministry of Education</li>
+                </ul>
+                <br>
+                <P>
+                    Daraja is also a member of Nairobi Budget Network_ the network aims at promoting the levels of
+                    engagement amongst the citizenry in county budget processes (Hosted by National Taxpayers
+                    Association)
+                </P>
+
+            </div>
+
+        </div>
+    </section>
+    <script>
+        // toggle effect
+$(document).ready(function(){
+    $("#toggler").click(function(){
+      $("#design-image").toggle();
+      $("#design").toggle();
+    });
+  });
+  $(document).ready(function(){
+    $("#toggler2").click(function(){
+      $("#development-image").toggle();
+      $("#development").toggle();
+    });
+  });
+  $(document).ready(function(){
+    $("#toggler3").click(function(){
+      $("#product-image").toggle();
+      $("#product").toggle();
+    });
+  }); 
+    </script>
+
+    {% endblock %}
