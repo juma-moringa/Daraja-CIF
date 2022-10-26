@@ -1,7 +1,9 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
 <style>
     /* FontAwesome for working BootSnippet :> */
 
@@ -78,7 +80,7 @@
         -ms-transform: rotateY(0deg);
         z-index: 2;
         margin-bottom: 30px;
-        box-shadow:#007b5e;
+        box-shadow: #007b5e;
     }
 
     .backside {
@@ -117,7 +119,7 @@
     .frontside .card,
     .backside .card {
         min-height: 312px;
-        
+
     }
 
     .backside .card a {
@@ -302,9 +304,7 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid"
-                                            src="/static/assets/winfred.jpeg"
-                                            alt="card image"></p>
+                                    <p><img class=" img-fluid" src="/static/assets/winfred.jpeg" alt="card image"></p>
                                     <h4 class="card-title">WINFRED OGUTU</h4>
                                     <p class="card-text">Project Assistant</p>
 
@@ -453,3 +453,4 @@
     </div>
 </section>
 <!-- Team -->
+{% endblock %}
