@@ -9,9 +9,8 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
     path("staff/", views.staff, name="staff"),
+    path("projects/", views.projects, name="projects"),
     path("contact-us/", views.contact, name="contact-us"),
-
-
 ]
 
 if settings.DEBUG:

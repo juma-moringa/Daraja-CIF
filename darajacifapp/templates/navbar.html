@@ -12,29 +12,28 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto dcif-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#{% url 'about' %}" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         About
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="about/">Introduction</a>
-                        <a class="dropdown-item" href="staff/">Team</a>
-                        <a class="dropdown-item" href="about/">Membership and Networks</a>
+                        <a class="dropdown-item" href="{% url 'about' %}">Introduction</a>
+                        <a class="dropdown-item" href="{% url 'staff' %}">Team</a>
+                        <a class="dropdown-item" href="{% url 'about' %}">Membership and Networks</a>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Projects</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Programs</a> </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item"> <a class="nav-link" href="contact-us">Contact Us</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'contact-us' %}">Contact Us</a></li>
             </ul>
             <span class="navbar-text">
                 <i class="fa fa-phone"></i> 254-720299100
             </span>
         </div>
     </nav>
-
 </nav>
