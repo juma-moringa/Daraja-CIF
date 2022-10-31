@@ -8,11 +8,25 @@
         padding-bottom: 5%;
     }
 
-    .page-list>img {
+    .page-list img {
         height: 100%;
         width: 100%;
-        box-sizing: border-box;
-        margin-top: 20%;
+        object-fit: cover;
+        padding-top:3%;
+    }
+
+    .page-list p {
+        margin: 0;
+        /* text-indent: 1rem; */
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .image-block {
+        height: auto;
     }
 </style>
 {% include 'headernav.html' with pagetitle='Our Projects' navtitle='Projects' %}
@@ -21,7 +35,7 @@
     <div class="container">
         <div class="page-list mb-5 ">
             <div class="row mb-5">
-                <div class="col-sm-6 col-md-6 col-lg-6 text-block d-inline-block">
+                <div class="col-lg-6 text-block d-inline-block">
                     <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
                         <hr class="mt-0 mb-3">
                         <h4 class="page-title mb-3"><a href="">STRENGTHENING PROTECTION, EDUCATION AND CARE FOR CHILDREN
@@ -43,20 +57,21 @@
                         <a class="btn-link" href="">2018-2020</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-6  image-block">
+                <div class="col-lg-6 image-block">
                     <a href="">
-                        <img data-aos="fade-up" data-aos-duration="1800" src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                            class="d-block w-100" alt="Camera" />
+                        <img data-aos="fade-up" data-aos-duration="1800"
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
                     </a>
                 </div>
             </div>
             <div class="row mb-5 flex-row-reverse">
-                <div class="col-lg-5 text-block d-inline-block">
+                <div class="col-lg-6 text-block d-inline-block">
                     <div data-aos="fade-left" data-aos-duration="1800" class="page-description">
                         <hr class="mt-0 mb-3">
                         <h4 class="page-title mb-3"><a href="">BABY CARE PROJECT
                             </a></h4>
-                        <p>in partnership with Aga Khan Foundation (AKF) to test an innovative model of quality,
+                        <p>in partnership with Aga Khan Foundation (AKF) to test an innovative
+                            model of quality,
                             cost-effective, and contextually relevant childcare centers that had the potential to be
                             taken to scale. The project increased access to quality ECD services for over 180 children
                             aged three months to four years. The project was implemented in Baba Dogo informal
@@ -68,10 +83,10 @@
                         <a class="btn-link" href="">2014-2018</a>
                     </div>
                 </div>
-                <div class="col-lg-7 image-block">
+                <div class="col-lg-6 image-block">
                     <a href="">
-                        <img data-aos="fade-up" data-aos-duration="1800" src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="img-fluid"
-                            alt="Camera" />
+                        <img data-aos="fade-up" data-aos-duration="1800"
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Camera" />
                     </a>
                 </div>
             </div>
