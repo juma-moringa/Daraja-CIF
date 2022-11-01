@@ -1,5 +1,5 @@
 {% load static %}
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
     <nav class="container">
         <a class="navbar-brand" href="#">
             <img src="{% static 'assets/logo.png' %}" width="180" height="auto" class="d-inline-block align-top"
@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ml-auto dcif-menu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="{% url 'about'  %}" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         About
                     </a>
