@@ -12,3 +12,5 @@ def projects(request):
     return render(request,'projects.html')
 def contact(request):
     return render(request,'contactus.html')
+def programs(request):
+    return render(request,'programs.html')
