@@ -1,22 +1,7 @@
+{% load static %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/css/main.css">
-
-  <title>Daraja-cif/Programs</title>
-  <script src="js/main.js" defer></script>
-
-</head>
-<!-- {% include 'headernav.html' with pagetitle='Daraja-cif/Programs' navtitle='Programs' %} -->
-<body>
-  <!-- <div class="col-xs-12 col-sm-6 col-md-4"> -->
- 
-  <div class="container">
+<section class="programs">
+  <div class="container program_container">
     <label class="accordion accordion--1" for="open-1">
       <input class="accordion__open" id="open-1" type="radio" name="acoordion-1">
       <input class="accordion__close" id="close-1" type="radio" name="acoordion-1">
@@ -36,7 +21,6 @@
         <span class="accordion__buttonText">Close</span>
       </label>
     </label>
-
 
     <label class="accordion accordion--2" for="open-2">
       <input class="accordion__open" id="open-2" type="radio" name="acoordion-2">
@@ -82,7 +66,5 @@
 
   </div>
   </div>
-</body>
-
-</html>
+</section>
 {% endblock %}
