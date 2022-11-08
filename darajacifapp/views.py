@@ -14,3 +14,5 @@ def contact(request):
     return render(request,'contactus.html')
 def programs(request):
     return render(request,'about.html')
+def gallery(request):
+    return render(request,'gallery.html')
