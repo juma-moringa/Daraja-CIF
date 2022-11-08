@@ -1,19 +1,13 @@
-*,*::before, *::after {box-sizing: border-box;}
-html,body{
-    margin: 0;
-    height: 100%;
-}
-
-body{
+.programs{
     background-color: #09ac2c;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container{
+.program_container{
     position : relative ;
     width : 100% ;
-    height : 800px ;
+    /* height : 800px ; */
     display : flex ;
     justify-content : space-around ;
     align-items : center ;
