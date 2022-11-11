@@ -92,6 +92,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "Darajaproject.wsgi.application"
 
 
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -161,3 +162,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

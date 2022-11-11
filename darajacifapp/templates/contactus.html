@@ -235,8 +235,8 @@
                         <div class="get_form_inner_text">
                             <h3>Get In Touch</h3>
                         </div>
-                        <form action="#">
-                            <div class="grid-50-50">
+                        <form action="#" method="post">
+                            <!-- <div class="grid-50-50">
                                 <input type="text" placeholder="First Name">
                                 <input type="text" placeholder="Last Name">
                                 <input type="email" placeholder="Email">
@@ -245,7 +245,10 @@
                             <div class="grid-full">
                                 <textarea placeholder="Type in your message...." cols="30" rows="10"></textarea>
                                 <input type="submit" value="Submit" style="border-radius:17px">
-                            </div>
+                            </div> -->
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input type="submit" value="Submit" style="border-radius:17px">
                         </form>
                     </div>
                 </div>
