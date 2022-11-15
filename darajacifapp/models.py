@@ -10,6 +10,7 @@ from tinymce.models import HTMLField
 class Blog(models.Model):
     blog_photo = CloudinaryField("image", default="image")
     blog_name = models.CharField(max_length=60)
+    blog_intro = models.CharField(max_length=60 ,null=True)
     blog_description = models.TextField(max_length=300, blank=True)
 
     def __str__(self):

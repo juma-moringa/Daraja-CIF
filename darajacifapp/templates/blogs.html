@@ -2,21 +2,30 @@
 
 {% block content %}
 {% include 'headernav.html' with pagetitle='Our Blogs' navtitle='Blogs' %}
-
-<div id="blogs" class="container">
+<div id="main-container">
     {% for blog in blogs%}
-    <div class="content">
-        <li class="member">
-            <div class="thumb"><img src="{{blog.blog_photo.url}}"></div>
-            <div class="description">
-                <h4>{{blog.blog_name}}</h4>
-                <p>
-                    {{blog.blog_description}}</p>
+    <div class="lgray-bg cause" style="margin-top: 5%;">
+        <div class="carousel-inner">
+            <div class="row position-relative">
+                <div class="col-md-7 offset-md-5"
+                    style="background-image: url({{blog.blog_photo.url}}); background-size: cover; width: 96%; background-position: center center; min-height: 70vh;">
+                </div>
+                <div class="container px-4 position-absolute"
+                    style="top: 50%; left: 50%; transform: translate(-50%, -50%);transition:0.25s ease-in-out;">
+                    <div class="row">
+                        <div class="col-md-6 bg-success carousel-bg d-flex text-white p-4 align-items-center">
+                            <div class="">
+                                <h4><span class="badge badge-dark h3">{{blog.blog_name}}</span></h4>
+                                <h2 class=" font-weight-bold" style="line-height: 1; ">
+                                    {{blog.blog_intro}}</h2>
+                                <p> {{blog.blog_description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </li>
+        </div>
     </div>
     {% endfor %}
 </div>
-
-
 {% endblock %}
