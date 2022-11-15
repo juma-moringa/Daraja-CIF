@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     "bootstrap5",
     "bootstrap4",
     "darajacifapp.apps.DarajacifappConfig",
-    # 'darajacifapp'
+    'sweetify'
+   
 ]
 
 MIDDLEWARE = [
@@ -164,3 +165,4 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'

@@ -6,23 +6,7 @@ from tinymce.models import HTMLField
 
 # Create your models here.
 
-# 1st(gallery class)
-class Gallery(models.Model):
-    title = models.CharField(max_length=200)
-    image = CloudinaryField("image")
-    description = models.TextField()
 
-    def __str__(self):
-        return self.title
-
-    def save_image(self):
-        self.save()
-
-    def delete_image(self):
-        self.delete()
-
-
-# 2nd(blog class)
 class Blog(models.Model):
     blog_photo = CloudinaryField("image", default="image")
     blog_name = models.CharField(max_length=60)
@@ -54,12 +38,17 @@ class Gallery(models.Model):
     image_title = models.CharField(max_length=200, default='DARAJA_CIF')
     image_description = HTMLField()
 
-
     def __str__(self):
         return self.image_title
 
     class Meta:
         ordering = ["-id"]
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
 
 
 class Projects(models.Model):
@@ -75,5 +64,18 @@ class Projects(models.Model):
 
     class Meta:
         ordering = ["-id"]
+    def save_project(self):
+        self.save()
 
+    def delete_project(self):
+        self.delete()
     
+class Contact(models.Model):
+  fullname = models.CharField("Full Name", max_length=500)
+  email = models.EmailField('Email', max_length=255)
+  pnumber = models.BigIntegerField()
+  message = models.TextField()
+  status = models.BooleanField(default=False)
+
+  def __str__(self):
+    return self.email
