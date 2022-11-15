@@ -23,13 +23,16 @@ class Gallery(models.Model):
 
 
 # 2nd(blog class)
-class blog(models.Model):
+class Blog(models.Model):
     blog_photo = CloudinaryField("image", default="image")
     blog_name = models.CharField(max_length=60)
     blog_description = models.TextField(max_length=300, blank=True)
 
     def __str__(self):
         return self.blog_name
+
+    class Meta:
+        ordering = ["-id"]
 
     def create_blog(self):
         self.save()
@@ -40,6 +43,9 @@ class blog(models.Model):
     def delete_blog(self):
         self.delete()
 
+    def all_blogs(cls):
+        blogs = cls.objects.all()
+        return blogs
 
 class Gallery(models.Model):
     galleryimage = models.ImageField(

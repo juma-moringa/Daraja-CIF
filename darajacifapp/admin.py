@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from darajacifapp.models import Gallery, blog
+from darajacifapp.models import Gallery, Blog
 
 # Register your models here.
 admin.site.register(Gallery)
-admin.site.register(blog)
+admin.site.register(Blog)

@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{% include 'headernav.html' with pagetitle='Our Blogs' navtitle='Blogs' %}
+
+<div id="blogs" class="container">
+    {% for blog in blogs%}
+    <div class="content">
+        <li class="member">
+            <div class="thumb"><img src="{{blog.blog_photo.url}}"></div>
+            <div class="description">
+                <h4>{{blog.blog_name}}</h4>
+                <p>
+                    {{blog.blog_description}}</p>
+            </div>
+        </li>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
