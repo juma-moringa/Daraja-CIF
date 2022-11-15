@@ -3,7 +3,7 @@ from django.http.response import Http404
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from darajacifapp.forms import ContactForm
-from darajacifapp.models import Blog
+from darajacifapp.models import Blog, Gallery
 
 
 # Create your views here.
@@ -28,7 +28,12 @@ def programs(request):
 
 
 def gallery(request):
-    return render(request, "gallery.html")
+  photos = Gallery.objects.all()
+  params = {
+    'gall': 'Gallery',
+    'photos':photos
+  }
+  return render(request, 'gallery.html', params)
 
 
 def contact(request):
