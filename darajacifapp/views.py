@@ -3,7 +3,7 @@ from django.http.response import Http404
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from darajacifapp.forms import ContactForm
-from darajacifapp.models import Blog, Gallery
+from darajacifapp.models import Blog, Gallery, Projects
 
 
 # Create your views here.
@@ -20,7 +20,12 @@ def staff(request):
 
 
 def projects(request):
-    return render(request, "projects.html")
+    allproject = Projects.objects.all()
+    params = {
+        "projects": "Projects",
+        "allproject": allproject,
+    }
+    return render(request, "projects.html", params)
 
 
 def programs(request):
