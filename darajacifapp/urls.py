@@ -3,6 +3,7 @@ from django.urls import path
 from django.conf.urls.static import static
 
 
+
 from . import views
 
 urlpatterns = [
@@ -13,11 +14,8 @@ urlpatterns = [
     path("contact-us/", views.contact, name="contact-us"),
     path("programs/", views.programs, name="programs"),
     path("gallery/", views.gallery, name="gallery"),
-
-    
-    
-    
-    
+    path("blog/",views.myblogs,name ='blog')
+      
 ]
 
 if settings.DEBUG:
