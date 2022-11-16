@@ -22,13 +22,11 @@
 
     .home_programs h3 a,
     .home_programs h3 {
-        /* color: #2CB34A; */
         color: red;
         line-height: 25px;
         font-size: 14pt;
         text-transform: uppercase;
         font-weight: 600;
-        /* text-align: center; */
     }
 
     .card p {
@@ -54,12 +52,51 @@
             display: inline;
         }
 
-        
+    }
+
+    .join_us {
+        text-align: center;
+        background: url("static/assets/img/review2.jpg") no-repeat scroll 0 0 / cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #overlay {
+        padding-top: 13%;
+        padding-bottom: 13%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(16, 16, 16, 0.719);
+    }
+
+    .carouselOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #080d15;
+        opacity: .7;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        margin: auto;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        width: 60%;
     }
 </style>
-<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Strong governance within the organizations</h2>
@@ -70,6 +107,7 @@
             </div>
         </div>
         <div class="carousel-item">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Enhance equitable access to quality education. share best practices, lessons
@@ -79,6 +117,7 @@
             </div>
         </div>
         <div class="carousel-item">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Education to all</h2>
@@ -89,17 +128,19 @@
         </div>
     </div>
     <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <i class="fa fa-solid fa-chevron-left" style="color: #fff;"></i>
+        <!-- <span class="visually-hidden">Previous</span> -->
 
     </a>
     <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+        <i class=" fa fa-solid fa-chevron-right" style="color: #fff;"></i>
+        <!-- <span class="visually-hidden">Next</span> -->
     </a>
-</div>
-<div class="container-fluid px-0">
+</section>
+
+<section class="container-fluid px-0">
     <div class="row bg-success featured-links">
         <a class="col-lg-4 featured-link">
             <span>View our Programs</span>
@@ -114,10 +155,8 @@
             <strong>Get involved</strong>
         </a>
     </div>
-</div>
-<!-- Main Content -->
-
-<div id="main-container">
+</section>
+<section id="main-container">
     <div class="lgray-bg cause" style="margin-top: 5%;">
         <div class="carousel-inner">
             <div class="row position-relative">
@@ -127,7 +166,7 @@
                 <div class="container px-4 position-absolute"
                     style="top: 50%; left: 50%; transform: translate(-50%, -50%);transition:0.25s ease-in-out;">
                     <div class="row">
-                        <div class="col-md-6 bg-primary carousel-bg d-flex text-white p-4 align-items-center">
+                        <div class="col-md-6 bg-success carousel-bg d-flex text-white p-4 align-items-center">
                             <div class="">
                                 <h4><span class="badge badge-dark h3">Education Cause</span></h4>
                                 <h2 class=" font-weight-bold" style="line-height: 1; ">
@@ -150,7 +189,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
             <div class="col">
-                <div class="card shadow-none">
+                <div class="card ">
                     <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="post-title"><a href="http://daraja-cif.org/projects">Early Childhood
@@ -167,7 +206,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card shadow-none">
+                <div class="card ">
                     <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
@@ -184,7 +223,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card shadow-none">
+                <div class="card">
                     <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
 
@@ -208,7 +247,8 @@
                 </a>
             </div> -->
     </div>
-
+</section>
+<section class="container-fluid statistics">
     <div class="featured-texts row">
         <div class="featured-text col-md-4 col-sm-4">
             <span>Successful projects</span>
@@ -223,8 +263,27 @@
             <strong>120</strong>
         </div>
     </div>
-</div>
-</div>
+</section>
+
+<section class="join_us">
+    <div id="overlay" class="container-fluid ">
+        <div class="row bld">
+            <div class="col-lg-12 text-muted text-center justify-content-center">
+                <h2 class="text-white mb-4 font-weight-bold">You Can Make A Difference</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 text-center text-lg-right mb-3">
+                <a id="joinBtn" class="btn btn-lg btn-outline-light border-white rounded-0 text-white"
+                    href="/contact">VOLUNTEER</a>
+            </div>
+            <div class="col-sm-6 text-center text-md-left" id="joinBtn">
+                <a class="btn btn-lg btn-outline-light border-white rounded-0 text-white " href="/contact">GET
+                    INVOLVED</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}
