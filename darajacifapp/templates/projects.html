@@ -12,6 +12,17 @@
         width: 100%;
         object-fit: cover;
         padding-top: 3%;
+        padding: 0 15px 15px 0;
+        background: linear-gradient(rgb(5, 5, 102) 0 0) 100% 100% / 60% 60% no-repeat;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+    }
+
+    @media (max-width: 650px) {
+
+        .page-list img {
+            padding: 0 0px 0px 0;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%, 0 00%);
+        }
     }
 
     .page-list p {
@@ -64,7 +75,8 @@
                 <div class="col-lg-6 image-block">
                     <a href="">
                         <img data-aos="fade-up" data-aos-duration="1800"
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="imgRight d-block w-100"
+                            alt="Camera" />
                     </a>
                 </div>
             </div>
@@ -90,7 +102,8 @@
                 <div class="col-lg-6 image-block">
                     <a href="">
                         <img data-aos="fade-up" data-aos-duration="1800"
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Camera" />
+                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="imgLeft d-block w-100"
+                            alt="Camera" />
                     </a>
                 </div>
             </div>
