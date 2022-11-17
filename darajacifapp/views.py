@@ -29,7 +29,7 @@ def projects(request):
 
 
 def programs(request):
-    return render(request, "about.html")
+    return render(request, "programs.html")
 
 
 def gallery(request):
