@@ -1,5 +1,6 @@
 {% load static %}
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: rgb(255, 255, 255);">
+
     <nav class="container">
         <a class="navbar-brand" href="#">
             <img src="{% static 'assets/logo.png' %}" width="180" height="auto" class="d-inline-block align-top"
@@ -22,17 +23,16 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{% url 'about' %}">Introduction</a>
                         <a class="dropdown-item" href="{% url 'staff' %}">Team</a>
-                        <a class="dropdown-item" href="{% url 'about' %}">Membership and Networks</a>
                     </div>
                 </li>
                 <li class="nav-item"> <a class="nav-link" href="{% url 'programs' %}">Programs</a> </li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href=" {% url 'blog' %}">Blog</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{% url 'contact-us' %}">Contact Us</a></li>
             </ul>
             <span class="navbar-text">
-                <i class="fa fa-phone"></i> 254-720299100
+                <i class="fa fa-phone" aria-hidden="true"></i> +254-720299100
             </span>
         </div>
     </nav>

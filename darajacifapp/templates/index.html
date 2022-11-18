@@ -3,9 +3,100 @@
 {% load static %}
 
 {% block content %}
-<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<style>
+    .card-img-top,
+    .card {
+        border-radius: 0px;
+    }
+
+    .home_programs .card:hover {
+        box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
+        transform: scale(1.05);
+    }
+
+    .home_programs .card {
+        border: rgb(230, 226, 226) 1px solid;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home_programs h3 a,
+    .home_programs h3 {
+        color: red;
+        line-height: 25px;
+        font-size: 14pt;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .card p {
+        color: rgb(153, 151, 151);
+        text-align: justify;
+    }
+
+    .m-md-4 {
+        margin: 1.5rem !important;
+    }
+
+    @media (max-width: 980px) {
+
+        .cause h4 {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 750px) {
+
+        .cause h4 {
+            display: inline;
+        }
+
+    }
+
+    .join_us {
+        text-align: center;
+        background: url("static/assets/img/review2.jpg") no-repeat scroll 0 0 / cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #overlay {
+        padding-top: 13%;
+        padding-bottom: 13%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(16, 16, 16, 0.719);
+    }
+
+    .carouselOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #080d15;
+        opacity: .7;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        margin: auto;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        width: 60%;
+    }
+</style>
+<section id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Strong governance within the organizations</h2>
@@ -16,6 +107,7 @@
             </div>
         </div>
         <div class="carousel-item">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Enhance equitable access to quality education. share best practices, lessons
@@ -25,6 +117,7 @@
             </div>
         </div>
         <div class="carousel-item">
+            <div class="carouselOverlay"></div>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits" />
             <div class="carousel-caption d-none d-md-block">
                 <h2>Education to all</h2>
@@ -34,117 +127,155 @@
             </div>
         </div>
     </div>
-    <a class="carousel-control-prev controls" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <i class="fa fa-solid fa-chevron-left" style="color: #fff;"></i>
+       
+
     </a>
-    <a class="carousel-control-next controls" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <i class=" fa fa-solid fa-chevron-right" style="color: #fff;"></i>
     </a>
-</div>
-<div class="featured-links row bg-success">
-    <a href="" class="featured-link col-md-4 col-sm-4">
-        <span>View our Programs</span>
-        <strong>Join us now</strong>
-    </a>
-    <a href="" class="featured-link col-md-4 col-sm-4">
-        <span>Become a volunteer</span>
-        <strong>Join us now</strong>
-    </a>
-    <a href="" class="featured-link col-md-4 col-sm-4">
-        <span>View our Projects</span>
-        <strong>Get involved</strong>
-    </a>
-</div>
-<!-- Main Content -->
-<div id="main-container">
-    <div class="content">
-        <div class="lgray-bg padding-tb75">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-sm-5">
-                        <h2 class="block-title">Support of education cause that need<br>urgent attention</h2>
-                        <div class="spacer-30"></div>
-                    </div>
-                    <div class="col-md-7 col-sm-7">
-                        <div class="spacer-10"></div>
-                        <p>Daraja Civic Initiatives Forum (DCIF) works with Ministry of Education to enhance equitable
-                            access to quality education. This involves establishment of coordination
-                            committees/mechanisms at sub-county, county and national level to discuss) issues for action
-                            by MOE, to share best practices, lessons and replicable strategies.</p>
-                    </div>
+</section>
+
+<section class="container-fluid px-0">
+    <div class="row bg-success featured-links">
+        <a class="col-lg-4 featured-link">
+            <span>View our Programs</span>
+            <strong>Join us now</strong>
+        </a>
+        <a href="contact-us/" class="col-lg-4 featured-link">
+            <span>Become a volunteer</span>
+            <strong>Join us now</strong>
+        </a>
+        <a href="contact-us/" class=" col-lg-4 featured-link">
+            <span>View our Projects</span>
+            <strong>Get involved</strong>
+        </a>
+    </div>
+</section>
+<section id="main-container">
+    <div class="lgray-bg cause" style="margin-top: 5%;">
+        <div class="carousel-inner">
+            <div class="row position-relative">
+                <div class="col-md-7 offset-md-5"
+                    style="background-image: url(static/assets/img/review2.jpg); background-size: cover; width: 100%; background-position: center center; min-height: 70vh;">
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a class="cProgress" data-complete="88" data-color="F23827"
-                                data-toggle="tooltip"><strong></strong></a>
-                            <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
-                                </a></h3>
+                <div class="container px-4 position-absolute"
+                    style="top: 50%; left: 50%; transform: translate(-50%, -50%);transition:0.25s ease-in-out;">
+                    <div class="row">
+                        <div class="col-md-6 bg-success carousel-bg d-flex text-white p-4 align-items-center">
+                            <div class="">
+                                <h4><span class="badge badge-dark h3">Education Cause</span></h4>
+                                <h2 class=" font-weight-bold" style="line-height: 1; ">
+                                    Support of education cause that need urgent attention</h2>
+                                <p>Daraja Civic Initiatives Forum (DCIF) works with Ministry of Education to enhance
+                                    equitable access to quality education. This involves establishment of
+                                    coordination committees/mechanisms at sub-county, county and national level to
+                                    discuss) issues for action by MOE, to share best practices, lessons and
+                                    replicable strategies.</p>
+                            </div>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary">View More</a>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a class="cProgress" data-complete="88" data-color="F23827"
-                                data-toggle="tooltip"><strong></strong></a>
-                            <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
-                                </a></h3>
-                        </div>
-                    </div>
-                    <a href="" class="btn btn-primary">View More</a>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a class="cProgress" data-complete="88" data-color="F23827"
-                                data-toggle="tooltip"><strong></strong></a>
-                            <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
-                                </a></h3>
-                        </div>
-                    </div>
-                    <a href="" class="btn btn-primary">View More</a>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="http://daraja-cif.org/upload/carousels/meeting4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a class="cProgress" data-complete="88" data-color="F23827"
-                                data-toggle="tooltip"><strong></strong></a>
-                            <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
-                                </a></h3>
-                        </div>
-                    </div>
-                    <a href="" class="btn btn-primary">View More</a>
-                </div>
-            </div>
-        </div>
-        <div class="featured-texts row">
-            <div class="featured-text col-md-4 col-sm-4">
-                <span>Successful projects</span>
-                <strong>14</strong>
-            </div>
-            <div class="featured-text col-md-4 col-sm-4">
-                <span>People Impacted</span>
-                <strong>200000 </strong>
-            </div>
-            <div class="featured-text col-md-4 col-sm-4">
-                <span>Total Volunteers</span>
-                <strong>120</strong>
             </div>
         </div>
     </div>
-</div>
+    <div class="container-fluid home_programs" style="padding: 5%;">
+        <div>
+            <h2 class="h2 pb-3 font-weight-bold">Featured Programs</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card ">
+                    <img src="{% static 'assets/img/review2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="post-title"><a href="http://daraja-cif.org/projects">Early Childhood
+                                Development
+                            </a></h3>
+                        <p> We deliver our mandate through research, learning facilitation, community
+                            mobilization,
+                            advocacy/policy engagements, capacity building, and service delivery. Daraja is a
+                            member
+                            of advocacy and professional networks/coalitions such as Kenya ECD Network and Elimu
+                            Yetu Coalition.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card ">
+                    <img src="{% static 'assets/img/public4.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="post-title"><a href="http://daraja-cif.org/projects">Education
+                            </a></h3>
+                        <p>Daraja has also participated in a number of policies
+                            forums & processes including:<br>
+                            i. APBET Policy development for low cost private schools located in the non-formal
+                            settlements. <br>
+                            ii. ECDE policy review Ministry of Education.<br>
+                            iii. Daraja has supported the legislation of the Child care Facilities Act 2017 for
+                            Nairobi city County
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'assets/img/review2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                        <h3 class="post-title"><a href="http://daraja-cif.org/projects">Governance and Civic
+                                participation
+                            </a></h3>
+                        <p>Daraja has a strong Governance structure led by a 10-member board of management,
+                            whose role is to advise on policy and strategic direction.Daraja also has a seasoned M&E
+                            department headed by a
+                            Monitoring, evaluation
+                            and learning officer. To support program activities is a pool of project officers,
+                            trainers, Community
+                            Resource persons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid statistics">
+    <div class="featured-texts row">
+        <div class="featured-text col-md-4 col-sm-4">
+            <span>Successful projects</span>
+            <strong>14</strong>
+        </div>
+        <div class="featured-text col-md-4 col-sm-4">
+            <span>People Impacted</span>
+            <strong>200000 </strong>
+        </div>
+        <div class="featured-text col-md-4 col-sm-4">
+            <span>Total Volunteers</span>
+            <strong>120</strong>
+        </div>
+    </div>
+</section>
+
+<section class="join_us">
+    <div id="overlay" class="container-fluid ">
+        <div class="row bld">
+            <div class="col-lg-12 text-muted text-center justify-content-center">
+                <h2 class="text-white mb-4 font-weight-bold">You Can Make A Difference</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 text-center text-lg-right mb-3">
+                <a id="joinBtn" class="btn btn-lg btn-outline-light border-white rounded-0 text-white"
+                    href="{% url 'contact-us' %}">VOLUNTEER</a>
+            </div>
+            <div class="col-sm-6 text-center text-md-left" id="joinBtn">
+                <a class="btn btn-lg btn-outline-light border-white rounded-0 text-white " href="{% url 'contact-us' %}">GET
+                    INVOLVED</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}

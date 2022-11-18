@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     "bootstrap5",
     "bootstrap4",
     "darajacifapp.apps.DarajacifappConfig",
-    # 'darajacifapp'
+    'sweetify'
+   
 ]
 
 MIDDLEWARE = [
@@ -92,16 +93,26 @@ TEMPLATES = [
 WSGI_APPLICATION = "Darajaproject.wsgi.application"
 
 
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#     }
+# }
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'darajacif',
+        'USER': 'ajay',
+        'PASSWORD':'Ajaylee254',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -152,3 +163,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
