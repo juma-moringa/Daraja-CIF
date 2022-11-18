@@ -12,25 +12,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        body {
-            background: #f2f4f6;
-        }
-
         .footer_get_touch_outer {
             margin-top: 80px;
-        }
-
-        .container {
-            width: 95%;
-            max-width: 1140px;
-            margin: auto;
         }
 
         .grid-70-30 {
@@ -42,7 +25,7 @@
             display: block;
             padding: 50px 40px;
             background: #fff;
-            box-shadow: -4px -2px 20px -7px #cfd5df;
+            box-shadow: -2px -1px 30px -5px #cfd5df;
         }
 
         input[type="text"],
@@ -218,7 +201,7 @@
 <body>
     {% include 'headernav.html' with pagetitle='Contact Us' navtitle='Contact' %}
 
-    <div class="container">
+    <div class="container pt-5">
         <h3>
             Our location
         </h3>
@@ -227,28 +210,16 @@
             P.O Box 6570 – 00100 . <br>
             Nairobi, Kenya</p>
         <p>Operating hours: Monday-Friday; 8:00 am – 5:00 am</p>
-        <i class=" fa fa-solid fa-chevron-right"></i>
     </div>
     <section class="footer_get_touch_outer">
         <div class="container">
-
-            <div class="footer_get_touch_inner grid-70-30">
+            <div class="footer_get_touch_inner grid-70-30 pb-5">
                 <div class="colmun-70 get_form">
                     <div class="get_form_inner">
                         <div class="get_form_inner_text">
                             <h3>Get In Touch</h3>
                         </div>
                         <form action="#" method="post">
-                            <!-- <div class="grid-50-50">
-                                <input type="text" placeholder="First Name">
-                                <input type="text" placeholder="Last Name">
-                                <input type="email" placeholder="Email">
-                                <input type="tel" placeholder="Phone/Skype">
-                            </div>
-                            <div class="grid-full">
-                                <textarea placeholder="Type in your message...." cols="30" rows="10"></textarea>
-                                <input type="submit" value="Submit" style="border-radius:17px">
-                            </div> -->
                             {% csrf_token %}
                             {{form.as_p}}
                             <input type="submit" value="Submit" style="border-radius:17px">
@@ -279,17 +250,14 @@
                     </ul>
                 </div>
             </div>
-            <br>
-            <div style="width:100%;height:460px"><iframe
+        </div>
+        <div class="container-fluid">
+            <div><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7601848048503!2d36.83836101475399!3d-1.319596999037538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11bb658b3a2f%3A0xcd434d5bff557f35!2sGuthera%20Dr%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1609217747107!5m2!1sen!2ske"
-                    width="1100" height="400" frameborder="0" style="border-radius:4%;" allowfullscreen=""
-                    aria-hidden="false" tabindex="0"></iframe>
+                    width="100%" height="400" frameborder="0" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
             </div>
         </div>
     </section>
-
 </body>
-
-
-
 {% endblock %}
