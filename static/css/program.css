@@ -26,6 +26,9 @@
 .accordion--3 {
     --color: #ffa400;
 }
+.accordion--4 {
+    --color: #0dc70d;
+}
 
 .accordion {
     position: relative;
