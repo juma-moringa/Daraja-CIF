@@ -49,65 +49,45 @@
 <section class="project_content">
     <div class="container-fluid">
         <div class="page-list mb-5 ">
+            {% for project in allproject %}
+            {% if forloop.counter|divisibleby:"2" == 0 %}
             <div class="row mb-5">
                 <div class="col-lg-6 text-block d-inline-block">
                     <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
                         <hr class="mt-0 mb-3">
-                        <h4 class="project-title mb-3">STRENGTHENING PROTECTION, EDUCATION AND CARE FOR CHILDREN
-                            (SPEC)
-                        </h4>
-                        <p>With support from Porticus Africa Foundation, Daraja partnered with the Centre for Research &
-                            Innovations in East Africa (CRI-EA) and Mukuru Child Welfare Center (MCWC) in the 2018-2019
-                            period to lead/coordinate formative research to inform the design and development of an ECD
-                            programme on Strengthening Protection, Education and Care for Children (SPEC) in Nairobi
-                            County. The study was to help the partners better understand the integration of child
-                            protection in early childhood, care, education & development (ECD) in urban informal
-                            settlements of Nairobi;- and assess how current early childhood development systems,
-                            socio-economic practices, and knowledge affect responsive caregiving, healthy child
-                            development, safety and educational achievements of children aged 0-8 years in the Mukuru
-                            and Mathare urban informal settlements of Nairobi City County. The research further helped
-                            Daraja, MCWC, and their local partners to understand the existing ECCED knowledge,
-                            practices, and policies to identify areas where there is momentum for change to catalyze
-                            more..</p>
-                        <a class="btn-link" href="">2018-2020</a>
+                        <h4 class="project-title mb-3">{{project.proj_title}}</h4>
+                        <p>{{project.proj_description}}</p>
+                        <a class="btn-link" href="">{{project.proj_date}}</a>
+                        <a class="btn-link" href="">Learn more</a>
                     </div>
                 </div>
                 <div class="col-lg-6 image-block">
                     <a href="">
-                        <img data-aos="fade-up" data-aos-duration="1800"
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="imgRight d-block w-100"
-                            alt="Camera" />
+                        <img data-aos="fade-up" data-aos-duration="1800" src="{{project.proj_image}}"
+                            class="imgRight d-block w-100" alt="Project Image" />
                     </a>
                 </div>
             </div>
+            {% else %}
             <div class="row mb-5 flex-row-reverse">
                 <div class="col-lg-6 text-block d-inline-block">
                     <div data-aos="fade-left" data-aos-duration="1800" class="page-description">
                         <hr class="mt-0 mb-3">
-                        <h4 class="project-title mb-3">BABY CARE PROJECT
-                        </h4>
-                        <p>In partnership with Aga Khan Foundation (AKF) to test an innovative
-                            model of quality,
-                            cost-effective, and contextually relevant childcare centers that had the potential to be
-                            taken to scale. The project increased access to quality ECD services for over 180 children
-                            aged three months to four years. The project was implemented in Baba Dogo informal
-                            settlement in Kasarani sub-county, Nairobi County and achieved 3 outcomes; (i) improved
-                            knowledge, attitudes, and practices among caregivers, parents, and health workers in support
-                            of children’s physical, cognitive, and social development; (ii) improved quality and
-                            cost-effectiveness of contextually relevant, sustainable and replicable baby care centers;
-                            and (iii) documentation of best practices.</p>
-                        <a class="btn-link" href="">2014-2018</a>
+                        <h4 class="project-title mb-3">{{project.proj_title}}</h4>
+                        <p>{{project.proj_description}}</p>
+                        <a class="btn-link" href="">{{project.proj_date}}</a>
+                        <a class="btn-link" href="">Learn more</a>
                     </div>
                 </div>
                 <div class="col-lg-6 image-block">
                     <a href="">
-                        <img data-aos="fade-up" data-aos-duration="1800"
-                            src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="imgLeft d-block w-100"
-                            alt="Camera" />
+                        <img data-aos="fade-up" data-aos-duration="1800" src="{{project.proj_image}}"
+                            class="imgRight d-block w-100" alt="Project Image" />
                     </a>
                 </div>
             </div>
-
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </section>
