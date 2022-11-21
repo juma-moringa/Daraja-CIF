@@ -26,6 +26,13 @@ def projects(request):
         "allproject": allproject,
     }
     return render(request, "projects.html", params)
+def projectdtls(request):
+    allproject = Projects.objects.all()
+    params = {
+        "projects": "Projects",
+        "allproject": allproject,
+    }
+    return render(request, "projectdtls.html", params)
 
 
 def programs(request):
