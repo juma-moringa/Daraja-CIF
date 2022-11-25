@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .project_content {
+        padding: 5%;
+    }
+
+    .page-list img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        padding-top: 3%;
+        padding: 0 15px 15px 0;
+        background: linear-gradient(rgb(3, 3, 73) 0 0) 100% 100% / 60% 60% no-repeat;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+    }
+
+    @media (max-width: 650px) {
+
+        .page-list img {
+            padding: 0 0px 0px 0;
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%, 0 00%);
+        }
+    }
+
+    .page-list p {
+        margin: 0;
+        /* text-indent: 1rem; */
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 30;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .image-block {
+        height: auto;
+    }
+
+    .project-title {
+        font-weight: 500;
+        color: rgb(29, 156, 29);
+    }
+</style>
+{% include 'headernav.html' with pagetitle='Projects Details' navtitle='Project Details' %}
+
+<section class="project_content">
+    <div class="container-fluid">
+        <div class="page-list mb-5 ">
+            <!-- proj1 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">1. Global Partnership for Education Knowledge Innovation Exchange
+                        </h4>
+                        <p> Daraja was part of a 6-member collaborative convened by Uthabiti Africa to Create quality,
+                            affordable childcare for all young children especially in the informal settlements within
+                            main cities in Kenya. (Nairobi, Mombasa and Kisumu). Following months of concept design,
+                            Uthabiti Africa and World University Service of Canada (WUSC) conducted a series of
+                            stakeholder consultations in Nairobi in May and June 2020, culminating in a workshop in
+                            Nairobi on 7th June 2020. During this workshop, key stakeholders including ECD Network for
+                            Kenya, APHRC, Daraja, Kidogo, Tiny Totos, the Council of Governors, the Africa Women Studies
+                            Centre, KEFEADO and the County Government of Nairobi collaboratively identified 6 market
+                            barriers that are impeding growth of the childcare sector in Kenya: (1) insufficient
+                            coordination (2) inadequate financing for childcare initiatives (3) no systematic approach
+                            for workforce development (4) insufficient research and data on childcare (5) uninformed
+                            demand for quality childcare and (6) insufficient policy framework.
+                            Daraja has since then been focusing on county discussions to identify existing policy gaps
+                            as well as financing childcare sector. Preliminary discussions revealed that childcare
+                            policies were generally inactive or non-existent in the three counties visited and therefore
+                            this presented an opportunity for discussion with potential funders. It was also revealed
+                            that most caregivers in the informal settlements preferred day care services as opposed to
+                            leaving their children with neighbors or relatives. It was however clear that daycare
+                            services were expensive and inaccessible to some caregivers and that there was need to link
+                            daycare owners with skills and opportunities that would boost the spaces and also make them
+                            accessible for caregivers.
+                            Daraja and Uthabiti held discussions with UNICEF who agreed to fund Kisumu and Nairobi
+                            counties directly. Further still, Daraja and Kidogo are in discussions to collaborate in
+                            implementing an integrated franchising model that will not only ensure quality Care for the
+                            children but also boost the caregivers financially.
+                        </p>
+                        <a class="btn-link" href="">{{project.proj_date}}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- proj2 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">2. Centre for Research & Innovations in East Africa (CRI-EA) and
+                            Mukuru Child Welfare Center (MCWC)
+                        </h4>
+                        <p>In the 2018 2019 period to lead/coordinate formative research to inform the design and
+                            development of an ECD programme on Strengthening Protection, Education and Care for Children
+                            (SPEC) in Nairobi County. The study was to help the partners better understand the
+                            integration of child protection in early childhood, care, education & development (ECD) in
+                            urban informal settlements of Nairobi; and assess how current early childhood development
+                            systems, socio-economic practices, and knowledge affect responsive caregiving, healthy child
+                            development, safety and educational achievements of children aged 0-8 years in the Mukuru
+                            and Mathare urban informal settlements of Nairobi City County. The research further helped
+                            Daraja, MCWC, and their local partners to understand the existing ECCED knowledge,
+                            practices, and policies to identify areas where there is momentum for change to catalyze
+                            more.
+                        </p>
+                        <a class="btn-link" href="">2018-2019</a>
+                    </div>
+                </div>
+            </div>
+            <!-- proj3 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">3. Baby Care Project
+                        </h4>
+                        <p>In partnership with Aga Khan Foundation (AKF) to test an innovative model of quality,
+                            cost-effective, and contextually relevant childcare centers that had the potential to be
+                            taken to scale. The project increased access to quality ECD services for over 180 children
+                            aged three months to four years. The project was implemented in Baba Dogo informal
+                            settlement in Kasarani sub-county, Nairobi County and achieved 3 outcomes; (i) improved
+                            knowledge, attitudes, and practices among caregivers, parents, and health workers in support
+                            of children’s physical, cognitive, and social development; (ii) improved quality and
+                            cost-effectiveness of contextually relevant, sustainable and replicable baby care centers;
+                            and (iii) documentation of best practices
+                        </p>
+                        <a class="btn-link" href="">2014 - 2018</a>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- proj4 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">4. Integrated Early Learning and Family support model
+                        </h4>
+                        <p> in partnership with Parenting in Africa Network (PAN), whose goal was to improve holistic
+                            development of children at ECDE level. Key activities of the project included training of
+                            ECD management committees and parents on parenting & child care skills, setting up resource
+                            centers and community/stakeholder engagement.
+                        </p>
+                        <a class="btn-link" href="">2015 - 2018</a>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- proj5 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">5. Urban Slums Basic Education Program (USBEP)
+                        </h4>
+                        <p>served to enhance the capacity of basic education providers in the urban informal
+                            settlements to realize access to quality education by all children. USBEP targeted 70
+                            complimentary schools in selected informal settlements of Nairobi County, and worked on four
+                            main areas; - capacity of school communities; improving teacher competencies; strengthening
+                            Boards of Management (BoM); and promoting child participation & protection;
+                        </p>
+                        <a class="btn-link" href="">2008 - 2016</a>
+                    </div>
+                </div>
+            </div>
+            <!-- proj6 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">6. The Nawiri Project
+                        </h4>
+                        <p> was a unique public-private partnership between Discovery Alliance and DFID implemented by
+                            Daraja in 80 complementary schools in the informal settlements of Nairobi. The project aimed
+                            at improving education opportunities for marginalized students in Nairobi County by
+                            increasing access, retention, and learning outcomes for students especially girls in
+                            targeted schools by empowering marginalized children, their families and their communities
+                            to overcome barriers to quality education.
+                        </p>
+                        <a class="btn-link" href="">2014 - 2016</a>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- proj7 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">7. Supporting Complementary Schools for Equitable Education
+                            (SUCSEED)
+                        </h4>
+                        <p>was part of the Kenya Essential Education Programme (KEEP), implemented by Daraja in
+                            partnership with Aga Khan Foundation in 151 complimentary schools in the informal settings
+                            in Nairobi ( Mukuru kwa Njenga, Huruma, Mathare, & Kibera), with funding from DFID/UKAID,
+                            the project was able to increase access to quality primary education by enrolling out of
+                            school children back to schools and ensuring that children at risk of dropping out of school
+                            were retained in school. The project also worked towards a) improving effectiveness,
+                            efficiency, and accountability of school management in selected complementary schools in
+                            Nairobi informal settlements b) Facilitate environmental education in schools through the
+                            formation of environmental clubs.
+                        </p>
+                        <a class="btn-link" href="">2014 - 2016</a>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- proj8 -->
+            <div class="row mb-5">
+                <div class="col-lg-10 text-block d-inline-block">
+                    <div data-aos="fade-right" data-aos-duration="1800" class=" project page-description">
+                        <hr class="mt-0 mb-3">
+                        <h4 class="project-title mb-3">8. Education for Marginalized Children in Kenya (EMACK)
+                        </h4>
+                        <p>was an initiative of the Ministry of Education (MOE) and the Aga Khan Foundation (AKF) made
+                            possible by support from USAID. This project was implemented by Daraja in 184 schools within
+                            Mukuru, Huruma and Mathare slums of Nairobi. The project aimed at improving teaching and
+                            learning environments to increase learner competencies and performance in the informal
+                            settlements of Nairobi and to strengthen school management & leadership practices to improve
+                            effectiveness, efficiency, and accountability of primary schools in target districts.
+                            Strategies used include; professional development of teachers, community participation
+                            (Whole School Approach), and Education Management Information Systems (EMIS).
+                        </p>
+                        <a class="btn-link" href="">2011 - 2014</a>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
