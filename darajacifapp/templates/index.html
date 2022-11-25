@@ -242,13 +242,13 @@
 </section>
 <section class="container-fluid statistics">
     <div class="featured-texts row">
-        <div class="featured-text col-md-4 col-sm-4">
+        <div class="featured-text col-md-4 col-sm-4 ">
             <span>Successful projects</span>
             <strong>14</strong>
         </div>
         <div class="featured-text col-md-4 col-sm-4">
             <span>People Impacted</span>
-            <strong>200000 </strong>
+            <strong>200,000 </strong>
         </div>
         <div class="featured-text col-md-4 col-sm-4">
             <span>Total Volunteers</span>
@@ -276,6 +276,24 @@
         </div>
     </div>
 </section>
+<script>
 
+    const counters = document.querySelectorAll('.counters');
+
+    counters.forEach(counter => {
+    let count = 0;
+    const updateCounter = () => {
+        const countTarget = parseInt(counter.getAttribute('data-counttarget'));
+        count++;
+        if (count < countTarget) {
+        counter.innerHTML = count;
+        setTimeout(updateCounter, 1);
+        } else {
+        counter.innerHTML = countTarget;
+        }
+    };
+    updateCounter();
+    });
+</script>
 
 {% endblock %}

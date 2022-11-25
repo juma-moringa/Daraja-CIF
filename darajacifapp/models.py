@@ -72,11 +72,22 @@ class Projects(models.Model):
         self.delete()
     
 class Contact(models.Model):
-  fullname = models.CharField("Full Name", max_length=500)
-  email = models.EmailField('Email', max_length=255)
-  pnumber = models.BigIntegerField()
-  message = models.TextField()
-  status = models.BooleanField(default=False)
+    fullname = models.CharField("Full Name", max_length=500)
+    email = models.EmailField('Email', max_length=255)
+    # pnumber = models.IntegerField()
+    message = models.TextField()
+    
 
-  def __str__(self):
-    return self.email
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        ordering = ["-id"]
+        
+    def save_contact(self):
+        self.save()
+
+    def delete_contact(self):
+        self.delete()
+
+     
