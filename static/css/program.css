@@ -18,17 +18,19 @@
 .accordion--1 {
     --color: #ff2e71;
 }
-
 .accordion--2 {
     --color: #00b1b9;
 }
-
 .accordion--3 {
     --color: #ffa400;
 }
 .accordion--4 {
     --color: #0dc70d;
 }
+.accordion--5 {
+    --color: #5e188d;
+}
+
 
 .accordion {
     position: relative;
