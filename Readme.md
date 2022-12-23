@@ -21,4 +21,4 @@ Daraja CIF is a Django website application that showcase all about daraja as a w
     - GIT
     - Material Design
   
-### ***www.daraja-cif.org***  
+### ***www.darajacif.org***  
